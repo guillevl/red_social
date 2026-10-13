@@ -1,14 +1,14 @@
 from abc import ABC, abstractmethod
 
-LIMTE_CARACTERES = 280
+LIMITE_CARACTERES = 280
 class Publicacion(ABC):
     def __init__(self, autor, texto):
 
         if not texto.strip():
             raise ValueError("El texto de la publicación no puede estar vacío.")
 
-        if len(texto) > LIMTE_CARACTERES:
-            raise ValueError(f"El texto de la publicación no puede superar los {LIMTE_CARACTERES} caracteres.")
+        if len(texto) > LIMITE_CARACTERES:
+            raise ValueError(f"El texto de la publicación no puede superar los {LIMITE_CARACTERES} caracteres.")
         
         self.autor = autor
         self.texto = texto
