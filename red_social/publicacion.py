@@ -24,7 +24,7 @@ class Publicacion(ABC):
 
         for palabra in texto.split():
             if palabra.startswith("#"):
-                hashtag = palabra.lower().strip(",.;:!?¡¿")
+                hashtag = palabra.lower().strip(",.;:!?¡¿()[]{}\"'«»“”‘’…")
 
                 if hashtag != "#" and hashtag not in hastags:
                     hastags.append(hashtag)
